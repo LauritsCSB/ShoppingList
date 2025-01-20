@@ -1,0 +1,28 @@
+﻿@model ShoppingList.Models.GroceryItem
+
+@{
+    ViewData["Title"] = "Tilføj vare";
+}
+
+<hi>Tilføj vare</hi>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label">Navn</label>
+        <input asp-for="Name" class="form-control"/>
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Amount" class="control-label">Antal</label>
+        <input asp-for="Amount" class="form-control" />
+        <span asp-validation-for="Amount" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Location" class="control-label">Afdeling</label>
+        <input asp-for="Location" class="form-control" />
+        <span asp-validation-for="Location" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Tilføj" class="btn btn-primary" />
+    </div>
+</form>
